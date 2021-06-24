@@ -10,7 +10,7 @@ import Demo1 from "./components/FireDemo/Demo1";
 
 function App() {
   return (
-    <>
+    <div className="App">
       {/* <Router>
       <div className="App">
         <Navbar />
@@ -29,7 +29,7 @@ function App() {
       </div>
     </Router> */}
       <Demo1 />
-    </>
+    </div>
   );
 }
 
