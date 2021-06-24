@@ -6,10 +6,12 @@ import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Demo1 from "./components/FireDemo/Demo1";
 
 function App() {
   return (
-    <Router>
+    <>
+      {/* <Router>
       <div className="App">
         <Navbar />
         <Switch>
@@ -25,7 +27,9 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </Router>
+    </Router> */}
+      <Demo1 />
+    </>
   );
 }
 
