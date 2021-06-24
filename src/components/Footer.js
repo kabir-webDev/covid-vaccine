@@ -9,12 +9,12 @@ function Footer() {
       <footer className="footer bg-dark">
         <div className="container grid grid-3">
           <div>
-            <h2>Zeroku || 2021</h2>
-            <p>Copyright &copy; Kabir Hasan</p>
+            <h2>CoVax || 2021</h2>
+            <p>Copyright &copy; Government</p>
           </div>
           <div>
             <h3>
-              Lets make the world easier <br /> With Coding
+              Let's live and let people live <br /> Taking Vaccine
             </h3>
           </div>
           <div className="social">
