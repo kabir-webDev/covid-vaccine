@@ -64,6 +64,7 @@ pre {
   color: #fff;
   height: 70px;
 }
+
 .navbar ul {
   display: flex;
 }
@@ -112,13 +113,16 @@ pre {
   position: relative;
   top: 60px;
   height: 350px;
-  width: 400px;
+  width: 350px;
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
   animation: slideInFromRight 1s ease-in;
 }
-
+.showcase-form img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .showcase-form .form-control {
   margin: 30px 0;
 }
@@ -172,6 +176,9 @@ pre {
 }
 
 /* Cli */
+.cli {
+  padding-top: 100px;
+}
 .cli .grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -186,7 +193,14 @@ pre {
 .cloud .grid {
   grid-template-columns: 4fr 3fr;
 }
-
+.about {
+  margin-bottom: 4%;
+}
+.about h2 {
+  color: #050229;
+  text-decoration: underline;
+  font-weight: 600;
+}
 /* Languages */
 
 .languages .flex {
@@ -252,18 +266,80 @@ pre {
   margin-bottom: 5px;
   border-bottom: 1px #ccc solid;
 }
-
 .docs-main a:hover {
   font-weight: bold;
 }
+.project {
+  padding-top: 2%;
 
+  padding-bottom: 2%;
+}
 /* Footer */
 .footer .social a {
   margin: 0 10px;
 }
-.social a :hover {
-  font-size: 35px;
+.prjct {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-bottom: 5%;
 }
+.nora__chora {
+  position: relative;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.contact {
+  background-color: #566573;
+}
+.contact h2 {
+  text-decoration: underline;
+  font-weight: 600;
+  color: white;
+}
+@keyframes example {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 25px;
+  }
+}
+.boom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.love {
+  animation: spin1 2s infinite;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.git {
+  animation: spin2 2s infinite;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Animations */
 @keyframes slideInFromLeft {
   0% {

@@ -19,41 +19,17 @@ function Home() {
         <section className="showcase">
           <div className="container grid">
             <div className="showcase-text">
-              <h1>Easier Deployment</h1>
-              <p>
-                Deploy web apps of all kinds, from large scale enterprise APIs
-                to static websites for individuals. Fill out the form to try a
-                demo of our platform
-              </p>
-              <a href="/features" className="btn btn-outline">
-                Read More
+              <h1>Banner Header</h1>
+              <p>Banner Details</p>
+              <a href="#" className="btn btn-outline">
+                Download Resume
               </a>
             </div>
-
-            <div className="showcase-form card">
-              <h2>Request a Demo</h2>
-              <form>
-                <div className="form-control">
-                  <input type="text" name="name" placeholder="Name" required />
-                </div>
-                <div className="form-control">
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Company Name"
-                    required
-                  />
-                </div>
-                <div className="form-control">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <input type="submit" value="Send" className="btn btn-primary" />
-              </form>
+            <div className="nora__chora showcase-form card">
+              <img
+                src="https://c.ndtvimg.com/2021-06/vgdaudqs_vaccine-generic-reuters_625x300_01_June_21.jpg"
+                alt=""
+              />
             </div>
           </div>
         </section>
