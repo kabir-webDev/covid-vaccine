@@ -1,35 +1,44 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./App.css";
-import Docs from "./components/Docs";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Demo1 from "./components/FireDemo/Demo1";
+import { createContext, useState, lazy, Suspense } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PrivateRoute from './components/LogIn/PrivateRoute/PrivateRoute';
+import { Toaster } from 'react-hot-toast';
+import { getDecodedUser } from "./components/LogIn/LogIn/LoginManager";
+import Preloader from './components/Shared/Preloader/Preloader';
+const NoMatch = lazy(() => import('./components/NoMatch'));
+const Home = lazy(() => import('./components/Home/Home/Home'));
+const LoginModal = lazy(() => import('./components/LogIn/LogIn/LoginModal'));
+const Dashboard = lazy(() => import('./components/Dashboard/Dashboard/Dashboard'));
 
-function App() {
+
+export const UserContext = createContext();
+const App = () => {
+  const [admin, setAdmin] = useState(false);
+  const [user, setUser] = useState(getDecodedUser());
+  const [selectedService, setSelectedService] = useState({})
+
   return (
-    <div className="App">
-      {/* <Router>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route path="/features">
-            <Features />
-          </Route>
-          <Route path="/docs">
-            <Docs />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router> */}
-      <Demo1 />
-    </div>
+    <UserContext.Provider value={{user, setUser, admin, setAdmin, selectedService, setSelectedService}}>
+      <Router>
+          <Toaster/>
+          <Suspense fallback={<Preloader/>}>
+            <Switch>
+              <PrivateRoute path="/dashboard">
+                <Dashboard/>
+              </PrivateRoute>
+              <Route path="/login">
+                <LoginModal/>
+              </Route>
+              <Route exact path="/">
+                <Home/>
+              </Route>
+              <Route exact path='*'>
+                <NoMatch/>
+              </Route>
+            </Switch>
+          </Suspense>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
