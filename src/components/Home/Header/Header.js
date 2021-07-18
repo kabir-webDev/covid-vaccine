@@ -1,32 +1,43 @@
-import React from 'react';
-import banner from '../../../image/hero-img.png'
-import Navbar from '../../Shared/Navbar/Navbar';
-import './Header.css'
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import banner from "../../../image/hero-img.png";
+import Navbar from "../../Shared/Navbar/Navbar";
+import "./Header.css";
+import Fade from "react-reveal/Fade";
 
 const Header = () => {
-    return (
-        <section className="header">
-            <Navbar/>
-            <div className="row w-100">
-                <div className="row col-md-11 mx-auto ">
-                    <div className="col-md-7 titleArea">
-                        <Fade duration={2000} left>
-                            <p className="miniTitle">WE CREATE IDEAS</p>
-                            <h1 className="headerTitle">HOW WE CAN HELP YOUR <span className="headerHighlight">BUSINESS</span></h1>
-                            <p className="headerContent">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                            <a href="#services"><button className="branBtn">Get Started</button></a>
-                        </Fade>
-                    </div>
-                    <Fade duration={2000} right>
-                        <div className="col-md-5 img">
-                            <img src={`${banner}`} alt="" className="img-fluid"/>
-                        </div>
-                    </Fade>
-                </div>
+  return (
+    <section className="header">
+      <Navbar />
+      <div className="row w-100">
+        <div className="row col-md-11 mx-auto ">
+          <div className="col-md-7 titleArea">
+            <Fade duration={2000} left>
+              <p className="miniTitle">TO BE SAFE</p>
+              <h1 className="headerTitle">
+                WE HAVE TO BE{" "}
+                <span className="headerHighlight">VACCINATED</span>
+              </h1>
+              <p className="headerContent">
+                Equitable access to safe and effective vaccines is critical to
+                ending the COVID-19 pandemic, so it is hugely encouraging to see
+                so many vaccines proving and going into development. WHO is
+                working tirelessly with partners to develop, manufacture and
+                deploy safe and effective vaccines.
+              </p>
+              <a href="#services">
+                <button className="branBtn">Get Started</button>
+              </a>
+            </Fade>
+          </div>
+          <Fade duration={2000} right>
+            <div className="col-md-5 img">
+              <img src={`${banner}`} alt="" className="img-fluid" />
             </div>
-        </section>
-    );
+          </Fade>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Header;
