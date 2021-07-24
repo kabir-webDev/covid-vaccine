@@ -24,14 +24,20 @@ const Header = () => {
                 working tirelessly with partners to develop, manufacture and
                 deploy safe and effective vaccines.
               </p>
-              <a href="#services">
-                <button className="branBtn">Get Started</button>
-              </a>
+              <a href="#services"></a>
             </Fade>
           </div>
           <Fade duration={2000} right>
             <div className="col-md-5 img">
-              <img src={`${banner}`} alt="" className="img-fluid" />
+              {" "}
+              <br />
+              <div className="noora__chora">
+                <img
+                  src="https://www.internationaldisabilityalliance.org/sites/default/files/custom/covid-19-vaccine.jpg"
+                  alt=""
+                  className="img-fluid"
+                />
+              </div>
             </div>
           </Fade>
         </div>

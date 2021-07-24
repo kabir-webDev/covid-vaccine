@@ -59,14 +59,24 @@ const NavBar = () => {
                 Home
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link href="#services" className="nav-link">
                 Services
               </Nav.Link>
+            </Nav.Item> */}
+            <Nav.Item>
+              <Nav.Link href="#updates" className="nav-link">
+                Updates
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#testimonial" className="nav-link">
-                Reviews
+              <Nav.Link href="#process" className="nav-link">
+                Process
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#faq" className="nav-link">
+                FAQ
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
