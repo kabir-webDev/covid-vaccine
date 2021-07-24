@@ -5,6 +5,9 @@ import PrivateRoute from "./components/LogIn/PrivateRoute/PrivateRoute";
 import { Toaster } from "react-hot-toast";
 import { getDecodedUser } from "./components/LogIn/LogIn/LoginManager";
 import Preloader from "./components/Shared/Preloader/Preloader";
+import RegisterForm from "./components/Home/Registration/RegisterForm";
+import Footer from "./components/Home/Footer/Footer";
+import NavB from "./components/Shared/Navbar/NavB";
 const NoMatch = lazy(() => import("./components/NoMatch"));
 const Home = lazy(() => import("./components/Home/Home/Home"));
 const LoginModal = lazy(() => import("./components/LogIn/LogIn/LoginModal"));
@@ -38,6 +41,11 @@ const App = () => {
             </PrivateRoute>
             <Route path="/login">
               <LoginModal />
+            </Route>
+            <Route exact path="/regi_form">
+              <NavB />
+              <RegisterForm />
+              <Footer />
             </Route>
             <Route exact path="/">
               <Home />
