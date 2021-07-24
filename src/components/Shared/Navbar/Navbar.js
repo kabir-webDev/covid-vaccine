@@ -80,7 +80,7 @@ const NavBar = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#contact" className="nav-link">
+              <Nav.Link href="#registration" className="nav-link">
                 Registration
               </Nav.Link>
             </Nav.Item>
