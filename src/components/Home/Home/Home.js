@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollTop from "../../Shared/ScrollTop/ScrollTop";
+import FAQ from "../Faq/FAQ";
 // import About from "../About/About";
 // import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
@@ -18,6 +19,7 @@ const Home = () => {
       <OurValue />
       {/* <Pricing/> */}
       <Reviews />
+      <FAQ />
       {/* <Contact/> */}
       <Footer />
       <ScrollTop />
