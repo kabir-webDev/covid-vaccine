@@ -1,103 +1,114 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from "../../../config/firebaseConfig";
+// import firebaseConfig from "../../../config/firebaseConfig";
 import jwt_decode from "jwt-decode";
-import userImg from '../../../image/user.svg'
+import userImg from "../../../image/user.svg";
 
-if(!firebase.apps.length){
-    firebase.initializeApp(firebaseConfig);
-}
+// if(!firebase.apps.length){
+//     firebase.initializeApp(firebaseConfig);
+// }
 
 const setToken = () => {
-  firebase.auth().currentUser.getIdToken(true)
-  .then(function(idToken) {
-    localStorage.setItem('token', idToken);
-  })
-}
+  firebase
+    .auth()
+    .currentUser.getIdToken(true)
+    .then(function (idToken) {
+      localStorage.setItem("token", idToken);
+    });
+};
 
 export const loginWithProvider = (provider) => {
-    return firebase.auth().signInWithPopup(provider)
-    .then( res => {
-        setToken();
-        return handleResponse(res);
-    }).catch( error  => {
-        const message = {
-          error: error.message
-        }
-        return message;
+  return firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((res) => {
+      setToken();
+      return handleResponse(res);
+    })
+    .catch((error) => {
+      const message = {
+        error: error.message,
+      };
+      return message;
     });
 };
 
 export const createAccount = (email, password) => {
-    return firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then( res => {
+  return firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((res) => {
       setToken();
       return handleResponse(res);
     })
-    .catch( error  => {
+    .catch((error) => {
       const message = {
-        error: error.message
-      }
+        error: error.message,
+      };
       return message;
     });
-}
+};
 
-export const loginWithEmail = (email, password) =>{
-  return firebase.auth().signInWithEmailAndPassword(email, password)
-  .then( res => {
-    setToken();
-    return handleResponse(res);
-  })
-  .catch( error => {
+export const loginWithEmail = (email, password) => {
+  return firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((res) => {
+      setToken();
+      return handleResponse(res);
+    })
+    .catch((error) => {
       const message = {
-      error: error.message
-      }
+        error: error.message,
+      };
       return message;
-  });
-}
+    });
+};
 
 const defaultName = (str) => {
-  let myStr = str
-  let firstWord = myStr.substring(0, 4)
+  let myStr = str;
+  let firstWord = myStr.substring(0, 4);
   return firstWord;
-}
+};
 
 const handleResponse = (res) => {
-  const {displayName, email, photoURL} = res.user;
+  const { displayName, email, photoURL } = res.user;
   const userInfo = {
     isSignedIn: true,
     name: displayName || defaultName(email),
     email: email,
     img: photoURL || userImg,
-  }
+  };
   return userInfo;
-}
+};
 
 export const getDecodedUser = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   if (!token) {
-      return {};
+    return {};
   }
   const { name, picture, email } = jwt_decode(token);
   const decodedUser = {
-      isSignedIn: true,
-      name: name || defaultName(email),
-      email: email,
-      img: picture || userImg,
-  }
+    isSignedIn: true,
+    name: name || defaultName(email),
+    email: email,
+    img: picture || userImg,
+  };
   return decodedUser;
-}
+};
 
 export const handleSignOut = () => {
-  return firebase.auth().signOut()
+  return firebase
+    .auth()
+    .signOut()
     .then(() => {
-        localStorage.removeItem('token');
-        const signedOutUser = {
-            isSignedIn: false,
-            name: '',
-            email: '',
-            img: ''
-        }
-        return signedOutUser;
-      })
-}
+      localStorage.removeItem("token");
+      const signedOutUser = {
+        isSignedIn: false,
+        name: "",
+        email: "",
+        img: "",
+      };
+      return signedOutUser;
+    });
+};
