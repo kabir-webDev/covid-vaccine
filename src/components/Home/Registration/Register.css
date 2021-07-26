@@ -20,7 +20,7 @@
   transition: 0.2s;
   overflow: hidden;
   transition-delay: 0.75s;
-  background-color: #7355f7;
+  background-color: #031321;
   font-size: 35px;
 }
 /* .atr:hover {
@@ -32,9 +32,9 @@
 } */
 .atr:hover {
   color: #ffffff;
-  background-color: #031321;
-  box-shadow: 0 0 10px #031321, 0 0 40px #031321, 0 0 80px #031321,
-    0 0 100px #031321;
+  background-color: #7355f7;
+  box-shadow: 0 0 10px #7355f7, 0 0 40px #7355f7, 0 0 80px #7355f7,
+    0 0 100px #7355f7;
   text-decoration: none;
 }
 .atr span {
@@ -46,7 +46,7 @@
   height: 3px;
   top: 0;
   left: -100%;
-  background-image: linear-gradient(90deg, #66fd78, #2196f3);
+  background-image: linear-gradient(90deg, #e1fd66, #935ef5);
   transition: 0.7s;
 }
 .atr:hover .span-1 {
@@ -57,7 +57,7 @@
   height: 3px;
   bottom: 0;
   right: -100%;
-  background-image: linear-gradient(270deg, #66fd78, #2196f3);
+  background-image: linear-gradient(270deg, #e1fd66, #935ef5);
   transition: 0.7s;
 }
 .atr:hover .span-2 {

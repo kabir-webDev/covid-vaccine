@@ -1,11 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBXgQRLWcaRVCrADB0ZoZzO3JYnH9hAbbM",
-  authDomain: "crudonfire.firebaseapp.com",
-  databaseURL: "https://crudonfire-default-rtdb.firebaseio.com",
-  projectId: "crudonfire",
-  storageBucket: "crudonfire.appspot.com",
-  messagingSenderId: "226020567267",
-  appId: "1:226020567267:web:647b6314336d99a307bdd6",
-  };
+  apiKey: "AIzaSyBlcce2AstAZjIv_VTHQPa_Cl0KT-5Ne4Q",
+  authDomain: "co-vaxbd.firebaseapp.com",
+  projectId: "co-vaxbd",
+  storageBucket: "co-vaxbd.appspot.com",
+  messagingSenderId: "1047100892698",
+  appId: "1:1047100892698:web:474324aff3e366d368d3a3",
+};
 
 export default firebaseConfig;

@@ -1,58 +1,29 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 function RegisterForm() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
+  console.log(watch("example"));
   return (
     <section id="regi_form">
-      This is a form Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Enim obcaecati aspernatur dolorem id expedita ullam doloremque eos
-      perferendis minus facilis, tempora optio ipsa, officiis corrupti rerum
-      asperiores dolore, aliquam repellat! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quod quisquam perspiciatis ab culpa totam
-      assumenda similique, distinctio deserunt impedit laudantium exercitationem
-      commodi minus qui, aspernatur amet eos atque quae officia. Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Iusto expedita neque,
-      aperiam quae aspernatur, aut atque explicabo libero architecto consequatur
-      voluptas, earum porro! Molestias rem minus quidem nihil ipsam
-      mollitia?This is a form Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Enim obcaecati aspernatur dolorem id expedita ullam doloremque eos
-      perferendis minus facilis, tempora optio ipsa, officiis corrupti rerum
-      asperiores dolore, aliquam repellat! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quod quisquam perspiciatis ab culpa totam
-      assumenda similique, distinctio deserunt impedit laudantium exercitationem
-      commodi minus qui, aspernatur amet eos atque quae officia. Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Iusto expedita neque,
-      aperiam quae aspernatur, aut atque explicabo libero architecto consequatur
-      voluptas, earum porro! Molestias rem minus quidem nihil ipsam
-      mollitia?This is a form Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Enim obcaecati aspernatur dolorem id expedita ullam doloremque eos
-      perferendis minus facilis, tempora optio ipsa, officiis corrupti rerum
-      asperiores dolore, aliquam repellat! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quod quisquam perspiciatis ab culpa totam
-      assumenda similique, distinctio deserunt impedit laudantium exercitationem
-      commodi minus qui, aspernatur amet eos atque quae officia. Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Iusto expedita neque,
-      aperiam quae aspernatur, aut atque explicabo libero architecto consequatur
-      voluptas, earum porro! Molestias rem minus quidem nihil ipsam
-      mollitia?This is a form Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Enim obcaecati aspernatur dolorem id expedita ullam doloremque eos
-      perferendis minus facilis, tempora optio ipsa, officiis corrupti rerum
-      asperiores dolore, aliquam repellat! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quod quisquam perspiciatis ab culpa totam
-      assumenda similique, distinctio deserunt impedit laudantium exercitationem
-      commodi minus qui, aspernatur amet eos atque quae officia. Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Iusto expedita neque,
-      aperiam quae aspernatur, aut atque explicabo libero architecto consequatur
-      voluptas, earum porro! Molestias rem minus quidem nihil ipsam
-      mollitia?This is a form Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Enim obcaecati aspernatur dolorem id expedita ullam doloremque eos
-      perferendis minus facilis, tempora optio ipsa, officiis corrupti rerum
-      asperiores dolore, aliquam repellat! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quod quisquam perspiciatis ab culpa totam
-      assumenda similique, distinctio deserunt impedit laudantium exercitationem
-      commodi minus qui, aspernatur amet eos atque quae officia. Lorem ipsum
-      dolor sit amet consectetur, adipisicing elit. Iusto expedita neque,
-      aperiam quae aspernatur, aut atque explicabo libero architecto consequatur
-      voluptas, earum porro! Molestias rem minus quidem nihil ipsam mollitia?{" "}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {/* register your input into the hook by invoking the "register" function */}
+        <input placeholder="test" {...register("example")} />
+
+        {/* include validation with required or other standard HTML validation rules */}
+        <input {...register("exampleRequired", { required: true })} />
+        {/* errors will return when field validation fails  */}
+        {errors.exampleRequired && <span>This field is required</span>}
+
+        <input type="submit" />
+      </form>
     </section>
   );
 }
