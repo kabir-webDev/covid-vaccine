@@ -8,11 +8,11 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      margin: theme.spacing(1),
+      margin: theme.spacing(2),
     },
   },
   extendedIcon: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
   },
 }));
 
@@ -21,17 +21,38 @@ export default function FooterCol() {
 
   return (
     <div className={classes.root}>
-      <Fab color="primary" aria-label="git" size="medium">
-        <a href="https://google.com">
-          <GitHubIcon />
-        </a>
-      </Fab>
-      <Fab color="primary" aria-label="in" size="medium">
-        <LinkedInIcon />
-      </Fab>
-      <Fab color="primary" aria-label="fb" size="medium">
-        <FacebookIcon />
-      </Fab>
+      <div className="float__link">
+        <Fab
+          color="primary"
+          aria-label="git"
+          size="medium"
+          style={{ background: "#23262E", margin: 2 }}
+        >
+          <a href="https://github.com/kabir-webDev">
+            <GitHubIcon />
+          </a>
+        </Fab>
+        <Fab
+          color="primary"
+          aria-label="in"
+          size="medium"
+          style={{ background: "#52BE80", margin: 2 }}
+        >
+          <a href="https://www.linkedin.com/in/kabirhasan/">
+            <LinkedInIcon />
+          </a>
+        </Fab>
+        <Fab
+          color="primary"
+          aria-label="fb"
+          size="medium"
+          style={{ background: "#0572E6", margin: 2 }}
+        >
+          <a href="https://www.facebook.com/skdrkabir/">
+            <FacebookIcon />
+          </a>
+        </Fab>
+      </div>
     </div>
   );
 }

@@ -39,3 +39,14 @@
     transform: rotate(360deg);
   }
 }
+
+.float__link a {
+  /* background-color: aquamarine; */
+  text-decoration: none;
+  color: white;
+}
+.float__link a:hover {
+  /* background-color: aquamarine; */
+  text-decoration: none;
+  color: rgb(209, 69, 69);
+}
