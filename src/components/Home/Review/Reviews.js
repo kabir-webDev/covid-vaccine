@@ -18,7 +18,7 @@ const Reviews = () => {
       });
   }, []);
   return (
-    <section id="process">
+    <>
       <h4 className="miniTitle text-center">TESTIMONIALS</h4>
       <div className="text-center mb-4">
         <h3 className="sectionTitle">WHAT OUR CLIENTS SAY’S</h3>
@@ -62,7 +62,7 @@ const Reviews = () => {
           )}
         </Swiper>
       </Col>
-    </section>
+    </>
   );
 };
 

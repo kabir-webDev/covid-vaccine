@@ -29,7 +29,7 @@ export default function FooterCol() {
           style={{ background: "#23262E", margin: 2 }}
         >
           <a href="https://github.com/kabir-webDev">
-            <GitHubIcon />
+            <GitHubIcon fontSize="large" />
           </a>
         </Fab>
         <Fab
@@ -39,17 +39,18 @@ export default function FooterCol() {
           style={{ background: "#52BE80", margin: 2 }}
         >
           <a href="https://www.linkedin.com/in/kabirhasan/">
-            <LinkedInIcon />
+            <LinkedInIcon fontSize="large" />
           </a>
         </Fab>
         <Fab
           color="primary"
           aria-label="fb"
           size="medium"
+          variant="round"
           style={{ background: "#0572E6", margin: 2 }}
         >
           <a href="https://www.facebook.com/skdrkabir/">
-            <FacebookIcon />
+            <FacebookIcon fontSize="large" />
           </a>
         </Fab>
       </div>

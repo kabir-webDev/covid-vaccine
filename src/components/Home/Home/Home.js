@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import FooterCol from "../Footer/FooterCol";
 import Header from "../Header/Header";
 import OurValue from "../OurValue/OurValue";
+import Process from "../Process/Process";
 import Register from "../Registration/Register";
 // import Pricing from "../Pricing/Pricing";
 import Reviews from "../Review/Reviews";
@@ -20,7 +21,8 @@ const Home = () => {
       {/* <Services /> */}
       <OurValue />
       {/* <Pricing/> */}
-      <Reviews />
+      {/* <Reviews /> */}
+      <Process />
       <Register />
       <FAQ />
       <br />
