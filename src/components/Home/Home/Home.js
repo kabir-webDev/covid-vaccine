@@ -4,6 +4,7 @@ import FAQ from "../Faq/FAQ";
 // import About from "../About/About";
 // import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import FooterCol from "../Footer/FooterCol";
 import Header from "../Header/Header";
 import OurValue from "../OurValue/OurValue";
 import Register from "../Registration/Register";
@@ -20,9 +21,12 @@ const Home = () => {
       <OurValue />
       {/* <Pricing/> */}
       <Reviews />
-      <FAQ />
-      {/* <Contact/> */}
       <Register />
+      <FAQ />
+      <br />
+      <br />
+      {/* <Contact/> */}
+      <FooterCol />
       <Footer />
       <ScrollTop />
     </main>

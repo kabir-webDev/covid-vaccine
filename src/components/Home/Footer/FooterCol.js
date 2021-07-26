@@ -1,28 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Col } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-import { scrollUP } from "../../Shared/ScrollTop/ScrollTop";
+import { makeStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FacebookIcon from "@material-ui/icons/Facebook";
 
-const FooterCol = (props) => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}));
+
+export default function FooterCol() {
+  const classes = useStyles();
+
   return (
-    <Col md={6} lg={3} className="footerLink">
-      <h5>{props.title ? props.title : ""}</h5>
-      {props.menuItems?.map(({ name, id }) => (
-        <Link to="/" onClick={scrollUP} key={id}>
-          <li>
-            <FontAwesomeIcon
-              icon={faAngleDoubleRight}
-              className="footArrowIcon"
-            />{" "}
-            {name}
-          </li>
-        </Link>
-      ))}
-      {props.children && props.children}
-    </Col>
+    <div className={classes.root}>
+      <Fab color="primary" aria-label="git" size="medium">
+        <a href="https://google.com">
+          <GitHubIcon />
+        </a>
+      </Fab>
+      <Fab color="primary" aria-label="in" size="medium">
+        <LinkedInIcon />
+      </Fab>
+      <Fab color="primary" aria-label="fb" size="medium">
+        <FacebookIcon />
+      </Fab>
+    </div>
   );
-};
-
-export default FooterCol;
+}

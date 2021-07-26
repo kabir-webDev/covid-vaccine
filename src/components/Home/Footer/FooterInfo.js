@@ -6,9 +6,7 @@ const FooterInfo = ({ data: { icon, info1, info2, id } }) => {
   const info = "co-vax.gov.bd";
   return (
     <Col md={4}>
-      <div
-        className={`d-flex fContactInfo fContactInfo${id} align-items-center`}
-      >
+      <div className="pre__footer">
         <FontAwesomeIcon icon={icon} className="fContactIcon" />
         <div>
           <p className={`brnName${id}`}>Co-VAX</p>

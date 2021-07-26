@@ -75,13 +75,13 @@ const NavBar = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#faq" className="nav-link">
-                FAQ
+              <Nav.Link href="#registration" className="nav-link">
+                Registration
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#registration" className="nav-link">
-                Registration
+              <Nav.Link href="#faq" className="nav-link">
+                FAQ
               </Nav.Link>
             </Nav.Item>
             {/* <Nav.Item>
