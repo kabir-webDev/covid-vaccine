@@ -1,14 +1,15 @@
 import React from "react";
 import GetData from "./GetData";
-import Links from "./Links";
 import BasicTable from "./BasicTable";
+import FormField from "./Form/FormField";
+import "./RegisterForm.css";
 
 function RegisterForm() {
   return (
-    <div>
-      {/* <Links /> */}
-      <GetData />
-      <BasicTable />
+    <div className="form__container">
+      {/* <GetData /> */}
+      <FormField />
+      <br />
     </div>
   );
 }
