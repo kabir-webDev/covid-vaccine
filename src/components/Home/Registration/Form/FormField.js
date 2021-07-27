@@ -4,6 +4,7 @@ import "./FormField.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
+import AssignmentIcon from "@material-ui/icons/Assignment";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +23,12 @@ export default function FormField() {
   return (
     <div className="box">
       <div className="form_container">
-        <h1>Register For Covid Vaccination</h1> <br />
+        <h1>
+          <AssignmentIcon style={{ fontSize: 42, color: "teal" }} /> Register
+          For Covid Vaccination{" "}
+          <AssignmentIcon style={{ fontSize: 42, color: "teal" }} />
+        </h1>{" "}
+        <br />
         <form
           className={classes.root}
           noValidate

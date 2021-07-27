@@ -4,6 +4,7 @@
   border-radius: 6px;
 }
 .box {
+  max-width: 70%;
   border-radius: 6px;
   box-shadow: 0px 0px 20px rgb(14, 85, 216);
   margin-bottom: 50px;
