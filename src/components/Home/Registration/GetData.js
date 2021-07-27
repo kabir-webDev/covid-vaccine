@@ -36,7 +36,7 @@ function GetData() {
     getUsers();
   }, []);
 
-  console.log(user);
+  //   console.log(user);
 
   const addData = () => {
     const res = db.collection("links").doc().set({
