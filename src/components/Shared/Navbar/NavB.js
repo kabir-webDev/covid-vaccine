@@ -25,12 +25,7 @@ const NavB = () => {
 
   const scrollTop = () => window["scrollTo"]({ top: 0, behavior: "smooth" });
   return (
-    <Navbar
-      className={`navbar navbar-expand-lg navbar-light ${
-        isSticky ? "navStyle" : "navDefault"
-      }`}
-      expand="lg"
-    >
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand
           as={Link}

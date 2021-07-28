@@ -36,18 +36,55 @@ export default function FormField() {
           onSubmit={handleSubmit(onSubmit)}
         >
           <TextField
-            {...register("name")}
-            id="filled-basic"
-            label="Enter Your Name"
+            style={{ width: "74.5%" }}
+            id="filled-select-currency"
+            select
+            label="Profession"
+            {...register("profession")}
             variant="filled"
+          >
+            <MenuItem
+              value="All officers and employees of the Government Health and Family
+          Planning Department"
+            >
+              All officers and employees of the Government Health and Family
+              Planning Department
+            </MenuItem>
+            <MenuItem value="Approved private health and family planning officers-employees">
+              Approved private health and family planning officers-employees
+            </MenuItem>
+            <MenuItem value="Educational Institutions">
+              Educational Institutions
+            </MenuItem>
+            <MenuItem value="Front-line law enforcement agency">
+              Front-line law enforcement agency
+            </MenuItem>
+            <MenuItem value="Bar Council Registrar Attorney">
+              Bar Council Registrar Attorney
+            </MenuItem>
+            <MenuItem value="Front-line media workers">
+              Front-line media workers
+            </MenuItem>
+            <MenuItem value="Bank officer-employee">
+              Bank officer-employee
+            </MenuItem>
+            <MenuItem value="Farmer">Farmer</MenuItem>
+            <MenuItem value="University Students">University Students</MenuItem>
+          </TextField>
+          <TextField
+            {...register("name")}
+            id="standard-basic"
+            label="Name"
+            variant="standard"
           />
           <TextField
             {...register("nid")}
-            id="filled-basic"
-            label="Enter NID No"
-            variant="filled"
+            id="standard-basic"
+            label="NID No"
+            variant="standard"
           />
           <TextField
+            // style={{ width: "74.5%" }}
             id="filled-select-currency"
             select
             label="Gender"
@@ -57,75 +94,45 @@ export default function FormField() {
             <MenuItem value="Male">Male</MenuItem>
             <MenuItem value="Female">Female</MenuItem>
           </TextField>
+          <TextField
+            {...register("age")}
+            id="standard-basic"
+            label="Age"
+            variant="standard"
+          />
           <br /> <br />
           <TextField
-            {...register("name")}
-            id="filled-basic"
-            label="Enter Your Name"
-            variant="filled"
+            {...register("email")}
+            id="standard-basic"
+            label="Email:"
+            variant="standard"
           />
           <TextField
-            {...register("nid")}
-            id="filled-basic"
-            label="Enter NID No"
-            variant="filled"
+            {...register("phone")}
+            id="standard-basic"
+            label="Phone:"
+            variant="standard"
           />
           <TextField
-            id="filled-select-currency"
-            select
-            label="Gender"
-            {...register("gender")}
-            variant="filled"
-          >
-            <MenuItem value="Male">Male</MenuItem>
-            <MenuItem value="Female">Female</MenuItem>
-          </TextField>
+            {...register("district")}
+            id="standard-basic"
+            label="District:"
+            variant="standard"
+          />
+          <TextField
+            {...register("thana")}
+            id="standard-basic"
+            label="Thana:"
+            variant="standard"
+          />
+          <TextField
+            style={{ width: "74.5%" }}
+            id="standard-basic"
+            label="Hospital:"
+            {...register("hospital")}
+            variant="standard"
+          ></TextField>
           <br /> <br />
-          <TextField
-            {...register("name")}
-            id="filled-basic"
-            label="Enter Your Name"
-            variant="filled"
-          />
-          <TextField
-            {...register("nid")}
-            id="filled-basic"
-            label="Enter NID No"
-            variant="filled"
-          />
-          <TextField
-            id="filled-select-currency"
-            select
-            label="Gender"
-            {...register("gender")}
-            variant="filled"
-          >
-            <MenuItem value="Male">Male</MenuItem>
-            <MenuItem value="Female">Female</MenuItem>
-          </TextField>
-          <br /> <br />
-          <TextField
-            {...register("name")}
-            id="filled-basic"
-            label="Enter Your Name"
-            variant="filled"
-          />
-          <TextField
-            {...register("nid")}
-            id="filled-basic"
-            label="Enter NID No"
-            variant="filled"
-          />
-          <TextField
-            id="filled-select-currency"
-            select
-            label="Gender"
-            {...register("gender")}
-            variant="filled"
-          >
-            <MenuItem value="Male">Male</MenuItem>
-            <MenuItem value="Female">Female</MenuItem>
-          </TextField>
           <br />
           <br />
           <button type="submit" value="Submit" className="button">
