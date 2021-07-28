@@ -3,7 +3,9 @@ import "./Register.css";
 function Register() {
   return (
     <section id="registration" className="rgtr">
-      <h4 className="miniTitle text-center">Register Here</h4>
+      <h4 className="miniTitle text-center" style={{ color: "#9b86f8" }}>
+        Register Here
+      </h4>
       <br />
       <br />
       <a className="atr" href="regi_form">

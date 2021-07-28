@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
-    background: "#85C1E9",
+    background: "#A9DFBF",
   },
 });
 
@@ -21,7 +21,7 @@ export default function ProcessCard({ id, heading, details, img }) {
       <Card className={classes.root}>
         <CardActionArea>
           <p style={{ textAlign: "center", fontSize: 20, color: "#1C2833" }}>
-            Step: {id}
+            <b>Step: {id}</b>
           </p>
 
           <CardMedia
@@ -37,7 +37,7 @@ export default function ProcessCard({ id, heading, details, img }) {
               <b>{heading}</b>
             </Typography>
             <Typography
-              style={{ fontSize: 16, color: "#283747" }}
+              style={{ fontSize: 16, color: "#1C2833" }}
               variant="body2"
               color="textSecondary"
               component="h5"

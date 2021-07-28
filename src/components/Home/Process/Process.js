@@ -22,18 +22,21 @@ function Process() {
       id: 3,
       heading: "Vaccination",
       details:
-        "Subject to receiving a text message on the mobile phone, you have to appear in person at the vaccination center on the specified date with the vaccine card, national identity card and signed consent form to receive the Covid-19 vaccine.",
+        "Subject to receiving a text message on the mobile phone, you have to appear in person at the vaccination center on the specified date with the vaccine card.",
       img: "https://www.publichealth.hscni.net/sites/default/files/inline-images/LOGO%20LANDSCAPE_0.png",
     },
   ];
   return (
     <section id="process">
-      <h4 className="miniTitle text-center">The Process</h4>
+      <h4 className="miniTitle text-center" style={{ color: "#9b86f8" }}>
+        The Process
+      </h4>
       <div className="text-center mb-4">
         <h3 className="sectionTitle">
           Of receiving the Covid-19 corona vaccine
         </h3>
       </div>
+      <br />
       <div className="container">
         {info.map(({ id, heading, details, img }) => (
           <ProcessCard
