@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(20),
-    flexBasis: "33.33%",
+    flexBasis: "100%",
     flexShrink: 0,
   },
   secondaryHeading: {
@@ -46,12 +46,20 @@ export default function FAQ() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography className={classes.heading}>Question #1</Typography>
+          <Typography className={classes.heading}>
+            Is online registration mandatory for Covid 19 vaccination?
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ background: "#A9DFBF", color: "#1C2833" }}>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+            Vaccination Centres provide for a limited number of on-spot
+            registration slots every day. Beneficiaries aged 45 years and above
+            can schedule appointments online or walk-in to vaccination centres.
+            Beneficiaries aged 18 years and above can schedule appointments
+            online or walk-in to Government vaccination centres. However,
+            beneficiaries aged 18-44 years should mandatorily register
+            themselves and schedule appointment online before going to a Private
+            vaccination centre.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -64,14 +72,12 @@ export default function FAQ() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Question #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat
-            lectus, varius pulvinar diam eros in elit. Pellentesque convallis
-            laoreet laoreet.
+          <Typography className={classes.heading}>
+            Is there any registration charges to be paid?
           </Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ background: "#A9DFBF", color: "#1C2833" }}>
+          <Typography>No. There is no registration charge.</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -83,12 +89,16 @@ export default function FAQ() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography className={classes.heading}>Question #3</Typography>
+          <Typography className={classes.heading}>
+            Can I register for vaccination without Aadhaar card?
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ background: "#A9DFBF", color: "#1C2833" }}>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            Yes, you can register on CoWIN portal using any of the following ID
+            proofs: <br />
+            a. National ID Card <br />
+            d. Passport
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -101,12 +111,37 @@ export default function FAQ() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>Question #4</Typography>
+          <Typography className={classes.heading}>
+            Is vaccination free at all vaccination centres?
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ background: "#A9DFBF", color: "#1C2833" }}>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            No. Currently, vaccination is free at Government hospitals and
+            charged at INR 250 in Private hospitals for beneficiaries aged 30
+            years and above.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel5"}
+        onChange={handleChange("panel5")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel5bh-content"
+          id="panel5bh-header"
+        >
+          <Typography className={classes.heading}>
+            Can I choose the vaccine?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ background: "#A9DFBF", color: "#1C2833" }}>
+          <Typography>
+            System will show the vaccine being administered in each vaccination
+            centre at the time of scheduling an appointment. Beneficiary can
+            choose the vaccination centre as per their choice of vaccine being
+            administered.
           </Typography>
         </AccordionDetails>
       </Accordion>

@@ -17,8 +17,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FormField() {
+  const [user, setUser] = useState([]);
   const classes = useStyles();
   const { register, handleSubmit, reset } = useForm();
+
+  const ref = db.collection("vax-register");
+
+  function getUsers() {
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setUser(items);
+    });
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+  const id = user.length;
 
   const onSubmit = ({
     profession,
@@ -32,18 +50,22 @@ export default function FormField() {
     thana,
     hospital,
   }) => {
-    const res = db.collection("vax-register").doc().set({
-      profession: profession,
-      name: name,
-      nid: nid,
-      gender: gender,
-      age: age,
-      email: email,
-      phone: phone,
-      district: district,
-      thana: thana,
-      hospital: hospital,
-    });
+    const res = db
+      .collection("vax-register")
+      .doc()
+      .set({
+        id: id + 1,
+        profession: profession,
+        name: name,
+        nid: nid,
+        gender: gender,
+        age: age,
+        email: email,
+        phone: phone,
+        district: district,
+        thana: thana,
+        hospital: hospital,
+      });
     reset();
     console.log("Clicked");
   };
