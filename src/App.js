@@ -36,9 +36,11 @@ const App = () => {
         <Toaster />
         <Suspense fallback={<Preloader />}>
           <Switch>
-            <PrivateRoute path="/dashboard">
+            <Route path="/dashboard">
+              <NavB />
               <Dashboard />
-            </PrivateRoute>
+              <Footer />
+            </Route>
             <Route path="/login">
               <LoginModal />
             </Route>

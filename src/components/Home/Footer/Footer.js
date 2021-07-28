@@ -22,11 +22,13 @@ import { scrollUP } from "../../Shared/ScrollTop/ScrollTop";
 const Footer = () => {
   return (
     <section class="row footer">
-      <div className="pre__footer"></div>
-      <p className="copyRight">
-        Copyright &copy; 2021 <span className="fHighlight">Co-Vax BD</span>. All
-        rights reserved.
-      </p>
+      <footer>
+        <div className="pre__footer"></div>
+        <p className="copyRight">
+          Copyright &copy; 2021 <span className="fHighlight">Co-Vax BD</span>.
+          All rights reserved.
+        </p>
+      </footer>
     </section>
   );
 };

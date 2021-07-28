@@ -1,10 +1,11 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./FormField.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import AssignmentIcon from "@material-ui/icons/Assignment";
+import { db } from "../../../../config/firebaseConfig";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,8 +18,35 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormField() {
   const classes = useStyles();
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => alert(JSON.stringify(data));
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = ({
+    profession,
+    name,
+    nid,
+    gender,
+    age,
+    email,
+    phone,
+    district,
+    thana,
+    hospital,
+  }) => {
+    const res = db.collection("vax-register").doc().set({
+      profession: profession,
+      name: name,
+      nid: nid,
+      gender: gender,
+      age: age,
+      email: email,
+      phone: phone,
+      district: district,
+      thana: thana,
+      hospital: hospital,
+    });
+    reset();
+    console.log("Clicked");
+  };
 
   return (
     <div className="box">
@@ -42,6 +70,7 @@ export default function FormField() {
             label="Profession"
             {...register("profession")}
             variant="filled"
+            required="true"
           >
             <MenuItem
               value="All officers and employees of the Government Health and Family
@@ -56,6 +85,8 @@ export default function FormField() {
             <MenuItem value="Educational Institutions">
               Educational Institutions
             </MenuItem>
+            <MenuItem value="University Students">University Students</MenuItem>
+            <MenuItem value="Farmer">Farmer</MenuItem>
             <MenuItem value="Front-line law enforcement agency">
               Front-line law enforcement agency
             </MenuItem>
@@ -68,28 +99,28 @@ export default function FormField() {
             <MenuItem value="Bank officer-employee">
               Bank officer-employee
             </MenuItem>
-            <MenuItem value="Farmer">Farmer</MenuItem>
-            <MenuItem value="University Students">University Students</MenuItem>
           </TextField>
           <TextField
             {...register("name")}
             id="standard-basic"
             label="Name"
             variant="standard"
+            required="true"
           />
           <TextField
             {...register("nid")}
             id="standard-basic"
             label="NID No"
             variant="standard"
+            required="true"
           />
           <TextField
-            // style={{ width: "74.5%" }}
             id="filled-select-currency"
             select
             label="Gender"
             {...register("gender")}
             variant="filled"
+            required="true"
           >
             <MenuItem value="Male">Male</MenuItem>
             <MenuItem value="Female">Female</MenuItem>
@@ -99,6 +130,7 @@ export default function FormField() {
             id="standard-basic"
             label="Age"
             variant="standard"
+            required="true"
           />
           <br /> <br />
           <TextField
@@ -112,18 +144,21 @@ export default function FormField() {
             id="standard-basic"
             label="Phone:"
             variant="standard"
+            required="true"
           />
           <TextField
             {...register("district")}
             id="standard-basic"
             label="District:"
             variant="standard"
+            required="true"
           />
           <TextField
             {...register("thana")}
             id="standard-basic"
             label="Thana:"
             variant="standard"
+            required="true"
           />
           <TextField
             style={{ width: "74.5%" }}
