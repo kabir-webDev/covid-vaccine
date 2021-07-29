@@ -11,10 +11,10 @@ import CountUp from "react-countup";
 
 const OurValue = () => {
   const workDetails = [
-    { title: "Happy Clients", number: 542, icon: faSmileBeam, id: 1 },
-    { title: "Projects", number: 623, icon: faTasks, id: 2 },
-    { title: "Hours of Support", number: 1634, icon: faHeadset, id: 3 },
-    { title: "Hard Workers", number: 31, icon: faUsers, id: 4 },
+    { title: "Today Recovered", number: 4312, icon: faSmileBeam, id: 1 },
+    { title: "Total Registered", number: 623, icon: faTasks, id: 2 },
+    { title: "IEDCR", number: 10655, icon: faHeadset, id: 3 },
+    { title: "New Cases Today", number: 6530, icon: faUsers, id: 4 },
   ];
 
   return (
