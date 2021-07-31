@@ -11,10 +11,8 @@
 # Key Technology
 - React 
 - React Bootstrap
+- Material-UI
 - Firebase
-- Express JS
-- MongoDB
-- Bootstrap5
 
 ###  `Website Link :` 
 
