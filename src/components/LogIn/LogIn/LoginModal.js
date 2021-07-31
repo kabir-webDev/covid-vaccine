@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./LoginModal.css";
 import "firebase/auth";
-import log from "../../../image/log.svg";
-import desk from "../../../image/register.svg";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
