@@ -1,7 +1,5 @@
 # Trusted Tech
-<a  href="https://trusted-tech.firebaseapp.com/">
-  <img  width="100%"  height="100%"  src="https://i.ibb.co/JkTxJdH/header.png"/>
-</a>
+  <img  width="100%"  height="100%"  src=""/>
 
 # Features 
 - Complete web application with a dynamic service section and review section.
@@ -18,7 +16,7 @@
 - MongoDB
 - Bootstrap5
 
-###  `Website Link :` [Live Site](https://trusted-tech.firebaseapp.com/)
+###  `Website Link :` 
 
-**Server Repo :** [Trusted Tech](https://github.com/sagazirobiul/trusted-tech-server) 
+**Server Repo :** 
 
