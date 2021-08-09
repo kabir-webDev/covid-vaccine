@@ -1,22 +1,24 @@
 // @material-ui/icons
-import DashboardIcon from "@material-ui/icons/Dashboard";
+import StorageIcon from "@material-ui/icons/Storage";
+import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import Image from "@material-ui/icons/Image";
 import Another from "../components/Dashboard/Another/Another";
 import DashboardHome from "../components/Dashboard/DashboardHome/DashboardHome";
+import HospitalUpdate from "../components/Dashboard/Hospital/HospitalUpdate";
 
 const dashRoutes = [
   {
     path: "/data-table",
     name: "User Data Table",
-    icon: DashboardIcon,
+    icon: StorageIcon,
     component: DashboardHome,
     layout: "/dashboard",
   },
   {
     path: "/hospital",
     name: "Hospital Info",
-    icon: DashboardIcon,
-    component: DashboardHome,
+    icon: LocalHospitalIcon,
+    component: HospitalUpdate,
     layout: "/dashboard",
   },
   // {

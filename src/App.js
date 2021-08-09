@@ -9,6 +9,8 @@ import RegisterForm from "./components/Home/Registration/RegisterForm";
 import Footer from "./components/Home/Footer/Footer";
 import NavB from "./components/Shared/Navbar/NavB";
 import AdminLayout from "./layouts/Admin";
+import ReactPdf from "./components/Home/Registration/ReactPdf";
+import Drawer from "./components/Dashboard/Drawer/Drawer";
 const NoMatch = lazy(() => import("./components/NoMatch"));
 const Home = lazy(() => import("./components/Home/Home/Home"));
 const LoginModal = lazy(() => import("./components/LogIn/LogIn/LoginModal"));
@@ -33,33 +35,39 @@ const App = () => {
         setSelectedService,
       }}
     >
-      <Router>
-        <Toaster />
-        <Suspense fallback={<Preloader />}>
-          <Switch>
-            {/* <Route path="/dashboard">
+      {/* <Router> */}
+      <Toaster />
+      <Suspense fallback={<Preloader />}>
+        <Switch>
+          {/* <Route path="/dashboard">
               <NavB />
               <Dashboard />
               <Footer />
             </Route> */}
-            <Route path="/dashboard" component={AdminLayout} />
-            <Route path="/login">
-              <LoginModal />
-            </Route>
-            <Route exact path="/regi_form">
-              <NavB />
-              <RegisterForm />
-              <Footer />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="*">
-              <NoMatch />
-            </Route>
-          </Switch>
-        </Suspense>
-      </Router>
+          <Route path="/dashboard" component={AdminLayout} />
+          <Route path="/login">
+            <LoginModal />
+          </Route>
+          <Route exact path="/pdf">
+            <ReactPdf />
+          </Route>
+          {/* <PDFViewer>
+        <ReactPdf />
+      </PDFViewer> */}
+          <Route exact path="/regi_form">
+            <NavB />
+            <RegisterForm />
+            <Footer />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="*">
+            <NoMatch />
+          </Route>
+        </Switch>
+      </Suspense>
+      {/* </Router> */}
     </UserContext.Provider>
   );
 };

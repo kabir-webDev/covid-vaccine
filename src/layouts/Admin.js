@@ -104,8 +104,8 @@ export default function Dashboard(props) {
       <div className={classes.wrapper}>
         <Sidebar
           routes={routes}
-          logoText="Dashboard"
-          logo={logo}
+          logoText="Admin Dashboard"
+          logo="https://upload.wikimedia.org/wikipedia/commons/0/0a/Virus_green.svg"
           handleDrawerToggle={handleDrawerToggle}
           open={mobileOpen}
           color="white"

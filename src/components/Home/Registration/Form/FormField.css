@@ -16,6 +16,12 @@
 #filled-basic {
   padding: 20px;
 }
+/* .submit-btn {
+  display: flex;
+} */
+.pdf-btn {
+  margin-left: 32% !important;
+}
 .button {
   border-radius: 4px;
   background-color: #f4511e;
