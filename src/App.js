@@ -8,6 +8,7 @@ import Preloader from "./components/Shared/Preloader/Preloader";
 import RegisterForm from "./components/Home/Registration/RegisterForm";
 import Footer from "./components/Home/Footer/Footer";
 import NavB from "./components/Shared/Navbar/NavB";
+import AdminLayout from "./layouts/Admin";
 const NoMatch = lazy(() => import("./components/NoMatch"));
 const Home = lazy(() => import("./components/Home/Home/Home"));
 const LoginModal = lazy(() => import("./components/LogIn/LogIn/LoginModal"));
@@ -36,11 +37,12 @@ const App = () => {
         <Toaster />
         <Suspense fallback={<Preloader />}>
           <Switch>
-            <Route path="/dashboard">
+            {/* <Route path="/dashboard">
               <NavB />
               <Dashboard />
               <Footer />
-            </Route>
+            </Route> */}
+            <Route path="/dashboard" component={AdminLayout} />
             <Route path="/login">
               <LoginModal />
             </Route>
