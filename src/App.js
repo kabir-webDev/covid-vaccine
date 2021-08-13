@@ -54,7 +54,7 @@ const App = () => {
           {/* <PDFViewer>
         <ReactPdf />
       </PDFViewer> */}
-          <Route path="/regi_form">
+          <Route exact path="/regi_form">
             <NavB />
             <RegisterForm />
             <Footer />
