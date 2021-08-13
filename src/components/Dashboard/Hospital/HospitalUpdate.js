@@ -16,10 +16,10 @@ function HospitalUpdate() {
     <div>
       Hospital Updates will be here
       <div className="container">
-        <HUpdates title="General Bed" general={data.gb} />
-        <HUpdates title="ICU Beds" general={data.icu} />
-        <HUpdates title="High Dependency Unit Beds" general={data.hdu} />
-        <HUpdates title="High Flow Nasal Canula Beds" general={data.hfnc} />
+        <HUpdates title="General Bed" general="12100" />
+        <HUpdates title="ICU Beds" general="256" />
+        <HUpdates title="High Dependency Unit Beds" general="1500" />
+        <HUpdates title="High Flow Nasal Canula Beds" general="412" />
       </div>
     </div>
   );

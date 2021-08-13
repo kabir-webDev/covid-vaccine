@@ -35,7 +35,7 @@ const NavBar = () => {
         <Navbar.Brand
           as={Link}
           exact
-          to="/"
+          to="/home"
           onClick={scrollTop}
           className="navBrn"
         >
@@ -50,7 +50,7 @@ const NavBar = () => {
               <Nav.Link
                 as={Link}
                 exact
-                to="/"
+                to="/home"
                 className="nav-link"
                 onClick={() =>
                   window["scrollTo"]({ top: 0, behavior: "smooth" })
