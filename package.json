@@ -1,7 +1,7 @@
 {
   "homepage": "http://kabir-webDev.github.io/covid-vaccine",
-  "name": "trusted-tech-client",
-  "version": "0.1.0",
+  "name": "Co-Vax_BD",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
