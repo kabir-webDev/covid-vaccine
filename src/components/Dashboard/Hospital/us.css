@@ -1,0 +1,11 @@
+.up__Style {
+  border: 5px solid tomato;
+  /* max-width: 80%; */
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #1a0d55;
+  font-weight: 600;
+  margin: 5px;
+  background-color: rgba(197, 196, 124, 0.39);
+}

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "row",
     backgroundColor: "#E4E4E4",
+    textAlign: "center",
   },
   section: {
     margin: 10,
@@ -23,10 +24,10 @@ const ReactPdf = () => (
       <Document>
         <Page size="A4" style={styles.page}>
           <View style={styles.section}>
-            <Text>Section #1</Text>
+            <Text>User Data Table - 1</Text>
           </View>
           <View style={styles.section}>
-            <Text>Section #2</Text>
+            <Text>User Data Table - 2</Text>
           </View>
         </Page>
       </Document>

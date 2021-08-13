@@ -54,12 +54,12 @@ const App = () => {
           {/* <PDFViewer>
         <ReactPdf />
       </PDFViewer> */}
-          <Route exact path="/regi_form">
+          <Route exact path="/covid-vaccine/regi_form">
             <NavB />
             <RegisterForm />
             <Footer />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/covid-vaccine/">
             <Home />
           </Route>
           <Route exact path="*">

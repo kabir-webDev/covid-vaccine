@@ -103,6 +103,7 @@ export default function Dashboard(props) {
     <MuiThemeProvider theme={theme}>
       <div className={classes.wrapper}>
         <Sidebar
+          style={{ background: "#73C6B6" }}
           routes={routes}
           logoText="Admin Dashboard"
           logo="https://upload.wikimedia.org/wikipedia/commons/0/0a/Virus_green.svg"
@@ -113,13 +114,18 @@ export default function Dashboard(props) {
           miniActive={miniActive}
           {...rest}
         />
-        <div className={mainPanelClasses} ref={mainPanel}>
+        <div
+          className={mainPanelClasses}
+          ref={mainPanel}
+          style={{ background: "#73C6B6" }}
+        >
           <AdminNavbar
             // eslint-disable-next-line react/jsx-no-bind
             sidebarMinimize={sidebarMinimize.bind(this)}
             miniActive={miniActive}
             brandText={getActiveRoute(routes)}
             handleDrawerToggle={handleDrawerToggle}
+            style={{ background: "#73C6B6" }}
             {...rest}
           />
           {/* On the /maps/full-screen-maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}

@@ -12,6 +12,8 @@ import ReactPdf from "../ReactPdf";
 import { PDFViewer } from "@react-pdf/renderer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Drawer from "../../../Dashboard/Drawer/Drawer";
+import { useSelector, useDispatch } from "react-redux";
+import { DECRE, INCRE } from "../../../../incAction.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,11 +33,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FormField() {
+  const data = useSelector((state) => state.incReducer.count);
+  const dispatch = useDispatch();
+  console.log(data);
+
   const [user, setUser] = useState([]);
   const classes = useStyles();
   const { register, handleSubmit, reset } = useForm();
 
-  const [pdf, setPdf] = useState(true);
+  const [pdf, setPdf] = useState(false);
 
   const ref = db.collection("vax-register");
 
@@ -86,6 +92,20 @@ export default function FormField() {
     setTimeout(() => {
       setPdf(false);
     }, 2000);
+    dispatch(
+      INCRE(
+        profession,
+        name,
+        nid,
+        gender,
+        age,
+        email,
+        phone,
+        district,
+        thana,
+        hospital
+      )
+    );
   };
 
   return (
@@ -239,9 +259,6 @@ export default function FormField() {
           <br />
         </div>
       </div>
-      {/* <PDFViewer>
-        <ReactPdf />
-      </PDFViewer> */}
     </>
   );
 }
