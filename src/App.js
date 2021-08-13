@@ -63,7 +63,7 @@ const App = () => {
             <Home />
           </Route>
           <Route exact path="*">
-            <NoMatch />
+            <Home />
           </Route>
         </Switch>
       </Suspense>
