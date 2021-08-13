@@ -1,0 +1,2 @@
+(this["webpackJsonpCo-Vax_BD"]=this["webpackJsonpCo-Vax_BD"]||[]).push([[8],{1522:function(t,e,s){"use strict";s.r(e);s(0);var c=s.p+"static/media/404.4861ae77.svg",a=s(6);e.default=function(){return Object(a.jsx)("div",{className:"d-flex justify-content-center align-items-center",children:Object(a.jsx)("img",{src:"".concat(c),alt:"",style:{height:"80vh",padding:"2rem 0 0 0"}})})}}}]);
+//# sourceMappingURL=8.8f11d277.chunk.js.map
