@@ -1,9 +1,16 @@
-<<<<<<< HEAD
 # Co-Vax BD
 =======
 # Site Link and Documantation will be added very soon.
 
-# Sample Images:
+## Functionalities
+------------
+- Complete web application with a dynamic service section.
+- After completing registration process, user can download his/her pdf copy.
+1. An user have to register and login into the website
+2. User can apply for covid vaccination
+3. All the data are accessible to admin
+4. Admin can see the available hospital update
+5. Sending Admin confirmation text to users is in process(I'll be updating that very soon using Nexmo gateway).
 
 ## Sign-in page
   <img  width="100%"  height="100%"  src="https://i.ibb.co/BfvZ1bp/covax-3.png"/>
@@ -20,15 +27,14 @@
 ## F.A.Q section
   <img  width="100%"  height="100%"  src="https://i.ibb.co/16YwyvF/covax4.png"/>
   
-## Registered used data table only visible to admin
-  <img  width="100%"  height="100%"  src="https://i.ibb.co/0KR3QwH/co-vax2.png"/>
-
-# Features 
-- Complete web application with a dynamic service section and review section.
-- Users login and apply for registration.
-- Admin can add services, update and delete services.
-
-# Key Technology
+## Admin Dashboard - Registered user data table
+  <img  width="100%"  height="100%"  src="https://i.ibb.co/6N11DW8/image.png"/>
+  
+## Realtime Hospital Updates
+  <img  width="100%"  height="100%"  src="https://i.ibb.co/8cKTLhp/image.png"/>
+  
+## Technologies Used
+------------
 - React 
 - React Bootstrap
 - Material-UI
