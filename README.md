@@ -44,4 +44,4 @@ Covid vaccine management system is a web based application that allows user/reci
 
 ###  `Website Link :` https://kabir-webdev.github.io/covid-vaccine/
 
-## enter "npm i" then "npm start" to run the project
+### enter "npm i" then "npm start" to run the project
