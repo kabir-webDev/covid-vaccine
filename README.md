@@ -1,5 +1,6 @@
 # Co-Vax BD
-=======
+Covid vaccine management system is a web based application that allows user/recipients to see covid updates, instructions and registration for the vaccine. To store data I used firestore database provided by firebase. Also realtime hospital update is available there.
+
 # Site Link and Documantation will be added very soon.
 
 ## Functionalities
@@ -39,6 +40,7 @@
 - React Bootstrap
 - Material-UI
 - Firebase
+- REST API
 
 ###  `Website Link :` https://kabir-webdev.github.io/covid-vaccine/
 
