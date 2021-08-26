@@ -40,8 +40,6 @@
 - Material-UI
 - Firebase
 
-###  `Website Link :` Coming Soon...
-
->>>>>>> d666ec2dc847e62eb20a0c3ecc6cdd3067b2f525
+###  `Website Link :` https://kabir-webdev.github.io/covid-vaccine/
 
 ## enter "npm i" then "npm start" to run the project
