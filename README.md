@@ -10,7 +10,7 @@ Covid vaccine management system is a web based application that allows user/reci
 3. All the data are accessible to admin
 4. Admin can see the available hospital update
 5. Sending Admin confirmation text to users is in process(I'll be updating that very soon using Nexmo gateway).
-### [N.B: Registration Functionalities is in progress. It will be updated soon...]
+##### [N.B: Registration Functionalities is in progress. It will be updated soon...]
 ## Sign-in page
   <img  width="100%"  height="100%"  src="https://i.ibb.co/BfvZ1bp/covax-3.png"/>
 
